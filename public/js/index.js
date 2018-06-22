@@ -7,7 +7,11 @@ socket.on('disconnect', () => {
   console.log('disconnected from server');
 });
 
-socket.on('createMessage', (message) => {
+// socket.on('createMessage', (message) => {
+//   console.log('new message', message);
+// });
+
+socket.on('newMessage', (message) => {
   console.log('new message', message);
 });
 
@@ -17,10 +21,10 @@ socket.on('createMessage', (message) => {
 //   createdAt: 123
 // }));
 
-socket.emit('createMessage', ({
-  from: 'client@client.com',
-  text: 'text from client',
-}));
+// socket.emit('createMessage', ({
+//   from: 'client@client.com',
+//   text: 'text from client',
+// }));
 
 
 // socket.on('newEmail', (email) => {
